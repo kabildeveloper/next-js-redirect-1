@@ -27,8 +27,8 @@ export default function Home({products}) {
         {
           products?.map((product)=>{
             return (
-              <Link href={getUrl(product)}>
-              <li key={product.id}>{product.name}</li>
+              <Link key={product.slug} href={getUrl(product)}>
+                <li>{product.name}</li>
               </Link>
             )
           })
